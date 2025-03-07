@@ -10,11 +10,17 @@ Este proyecto proporciona una API REST para la gestión de usuarios, clientes, c
 ### 2.1 Importar la Colección en Postman
 Para facilitar la prueba de los endpoints, se proporciona una colección de Postman.
 
+#### Ubicación del archivo:
+El archivo `supermercado.postman_collection.json` se encuentra en:
+```
+public/uploads/data
+```
+
 #### Pasos para importar la colección:
 1. Abre **Postman**.
 2. Ve a la pestaña **Import** en la parte superior izquierda.
 3. Selecciona la opción **File**.
-4. Busca el archivo `supermercado.postman_collection.json` y cárgalo.
+4. Busca el archivo en `public/uploads/data` y cárgalo.
 5. Una vez importado, la colección aparecerá en la lista de Postman.
 
 ---
@@ -28,11 +34,16 @@ Si aún no tienes MongoDB instalado, puedes hacerlo desde:
 - [MongoDB Community Server](https://www.mongodb.com/try/download/community)
 
 ### 3.2 Importar Datos
-1. Ubica el archivo JSON con los datos iniciales, por ejemplo: `data.json`.
-2. Usa el siguiente comando en la terminal para importar los datos:
+#### Ubicación del archivo de datos:
+El archivo `data.json` se encuentra en:
+```
+public/uploads/data
+```
+
+1. Usa el siguiente comando en la terminal para importar los datos:
 
 ```sh
-mongoimport --db supermercado --collection clientes --file data.json --jsonArray
+mongoimport --db supermercado --collection clientes --file public/uploads/data/data.json --jsonArray
 ```
 
 **Nota:** Ajusta el nombre de la colección según los datos que deseas importar (ej. `productos`, `categorias`).
@@ -89,5 +100,5 @@ A continuación, se presentan los endpoints organizados por sus respectivas ruta
 
 ---
 
-### **Autor**: Equipo de Desarrollo - Supermercado API
+### Angel Javier: Equipo de Desarrollo - Supermercado API
 
